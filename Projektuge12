@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Projekt, uge 12</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.background {
+			background: lightpink;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 20px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: darkred;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px white;
+			border-radius: 9px;
+		}
+
+        body {
+            background-image: url('https://artwoonz.b-cdn.net/wp-content/uploads/2019/07/Digital-artist-thinklumi-41.jpg');
+        }
+
+		.firstsection {
+			background-color: white;
+			height: 700px;
+		}
+
+		.secondsection {
+			background-color: lightyellow;
+			height: 400px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+
+		.text-small {
+			font-size: 18px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section {
+			height: 400px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 90%;
+			margin: auto;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "logo.png">
+			</div>
+			<li><a href="#barrøv">Bar Røv</a></li>
+			<li><a href="#hangman">Hangman</a></li>
+			<li><a href="#gætettal">Gæt Et Tal</a></li>
+            <li><a href="#vendespil">Vendespil</a></li>
+		</ul>
+
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="barrøv">Bar Røv</h1>
+				<p class="text-small">
+					Der spilles med 5/6 terninger og med mindst 2 deltagere. <br>
+                    <br>
+                    <b>Spillets regler er: </b> <br>
+                    <br>
+                    1. Spillet handler om at få så mange point som muligt, og først komme op på det fastlagte antal point. Eksempelvis 50 eller flere. Vælg selv. <br>
+                    <br>
+                    2. Man spiller efter tur, og starter med at slå med alle terningerne. <br>
+                    <br>
+                    3. Ethvert slag som indeholdere 2 ́ere eller 5 ́ere giver ikke point. Alle 2  ́ere og 5 ́ere lægges til side og man slår igen med resten af terningerne. <br>
+                    <br>
+                    4. Et slag uden 2 ́ere og 5 ́ere giver point og summen af øjne er værdien af det pågældende slag.<br>
+                    <br>
+                    5. Man må fortsætte med at slå så længe der er terninger tilbage.<br>
+                    <br>
+                    6. Når alle terninger er blevet til 2 ́ere eller 5 ́ere har man “Bar røv” og turen går videre til den næste.<br>
+                    <br>
+                    7. Man får noteret summen af de point man opnåede i denne runde.<br>
+                    <br>
+                    8. Når der i en runde er mindst 1 spiller som har opnået det aftalte antal point spilles runden færdig, og spilleren med flest point vinder.
+				
+                </p>
+                <button class="btn btn-sm">Spil Vendespillet!</button>
+                
+
+			</div>
+		</div>
+	</section>
+
+	<section class="secondsection">
+		<div class="box-main">
+		
+		<h1 class="text-big" id="hangman">
+		Hangman &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</h1>
+		<p class="text-small">
+			<b>Spillets regler findes på: </b><i> https://en.wikipedia.org/wiki/Hangman_(game) </i> <br>
+            i 'the Overview section'. I kan vælges mellem at lave det som:<br>
+            <br>
+            1. Enkeltpersonsspil hvor programmet finder et ord fra en liste, eller<br>
+            <br>
+            2. Et to-personers-spil, hvor den ene spiller finder på et ord, og den anden spiller gætter.
+		</p>
+        
+        <button class="btn btn-sm">Spil Hangman!</button>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		
+			<h1 class="sectionTag text-big">Gæt et tal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+
+			<p class="sectionSubTag text-small">
+				i intervallet 1 - 1000. Programmet finder i hemmelighed et tal i intervallet. <br>
+                Spilleren skal derefter gætte tallet på højst 10 forsøg. <br>
+                Efter hvert gæt skal programmet tilkendegive om tallet er for stort eller for lille.<br>
+                Spilleren fortsætter derefter med et nyt gæt i overensstemmelse med den givne feedback.<br>
+                Computeren/programmet vinder, hvis spilleren ikke gætter tallet indenfor 10 forsøg.<br>
+                Spilleren vinder, hvis tallet gættes. Programmet skal tidsmåle tiden det tager at spille en runde. <br>
+                Resultater scores således, at hvis to spillere bruger samme antal forsøg, vinder spilleren med den hurtigste tid.
+			</p>
+            
+
+		</div>
+
+		<div></div>
+		</div>
+	</section>
+
+	<footer class="background">
+		<p class="text-footer">
+			Copyright ©-if u can read this then u must be bored or this's probably too visible. Lavet af Lili R.B
+		</p>
+
+
+	</footer>
+</body>
+
+</html>
